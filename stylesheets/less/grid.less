@@ -29,12 +29,25 @@ body {
 	margin: 0 @total-width*(((@gutter-width*.5)/@_gridsystem-width)*-1);
 	.clearfix;
 }
+
+// [bb] is @columns here even used?
 .column(@x,@columns:@columns) {
 	display: inline;
 	float: left;
 	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @_gridsystem-width);
 	margin: 0 @total-width*((@gutter-width*.5)/@_gridsystem-width);
 }
+
+// [bb] alternative to .row() - changing margin
+.nested-column(@x) {
+  display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @_gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.25)/@_gridsystem-width);
+}
+
+
+
 .offset(@offset:1) {
 	margin-left: (@gutter-width+@column-width)*@offset + @total-width*((@gutter-width*.5)/@_gridsystem-width);
 }
