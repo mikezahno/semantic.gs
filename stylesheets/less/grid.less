@@ -32,7 +32,7 @@ body {
 
 // [bb] is @columns here even used?
 .column(@x,@columns:@columns) {
-	display: inline;
+	display: inline;  /* [bb] not sure why this is better than block, seems to work both ways */
 	float: left;
 	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @_gridsystem-width);
 	margin: 0 @total-width*((@gutter-width*.5)/@_gridsystem-width);
