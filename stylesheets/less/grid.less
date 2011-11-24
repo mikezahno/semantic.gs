@@ -54,6 +54,8 @@ body {
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix() {
+  clear: both; /*[bb] added - safe? */
+  
 	*zoom:1;
 	
 	&:before,
