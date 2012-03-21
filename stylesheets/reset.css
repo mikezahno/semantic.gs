@@ -46,3 +46,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* ANM fix */
+strong, b { font-weight: bold; }
